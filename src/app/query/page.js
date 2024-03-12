@@ -5,3 +5,4 @@ function QueryPage() {
 }
 
 export default QueryPage;
+QueryPage;
