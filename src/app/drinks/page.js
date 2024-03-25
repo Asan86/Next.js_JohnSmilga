@@ -5,6 +5,11 @@ const url = "https://jsonplaceholder.typicode.com/users";
 const fetchDrinks = async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   const respons = await fetch(url);
+  //throw error
+  if (!respons.ok) {
+    throw new Error("Filed to fetch drinks");
+  }
+
   const data = await respons.json();
   return data;
 };
